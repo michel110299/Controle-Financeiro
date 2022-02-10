@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastrar</title>
+
+        <!-- Import CSS Bootstrap -->
+        <link rel="stylesheet" href="../../css/Bootstrap/bootstrap.min.css">
+
+        <!-- Import Custom CSS -->
+        <link rel="stylesheet" href="../../css/custom/custom.css">
+
+        <!-- Import Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+        <!-- Import Pallete Colors -->
+        <link href="https://oondev.github.io/projects/pallete-colors/v1.0.0/pallete-colors.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="col col-md-11 col-sm-12 col-xs-12 col-lg-11 col-xl-11 mt-3">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active text-red-10" aria-current="page" href="#">Finanças</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Dashbord</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Graficos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="mt-2">
+            </div>
+        </header>
+        <main class="container">
+            <div class="row mt-5">
+                <div class="col col-md-8 col-sm-12 col-xs-12 col-lg-8 col-xl-8 mx-auto">
+                    <div class="card text-center p-2" style="border-radius:25px;">
+                        <div class="d-flex justify-content-center">
+                            <div class="col-10">
+                                <h2 class="mt-5 font-mulish text-center">Novo Usuário</h2>
+                                <hr>
+                            </div>
+                        </div>
+                        <form method="POST">
+                            <div class="card-body p-5">
+                                <div class="input-group mb-3 mt-2">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-nome"><i class="material-icons">person</i></span>
+                                    <input type="text" class="form-control InputLogin" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon-nome" required>
+                                </div>
+                                <div class="input-group mb-3 mt-2">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-email"><i class="material-icons">email</i></span>
+                                    <input type="text" class="form-control InputLogin" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon-email" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-password"><i class="material-icons">lock</i></span>
+                                    <input id="id_Senha" class="form-control InputLogin" type="password" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon-password" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-password-confirm"><i class="material-icons">lock</i></span>
+                                    <input id="id_confirmacaoSenha" class="form-control InputLogin" type="password" placeholder="Confirmação de Senha" aria-label="Username" aria-describedby="basic-addon-password-confirm" required>
+                                </div> 
+                                <div class="form-check form-switch">
+                                    <input id="checkSenha" class="form-check-input" type="checkbox" role="switch"  data-bs-toggle="tooltip" data-bs-placement="top" title="Ver senhas">
+                                </div> 
+                                <div class="d-grid col-8 mx-auto">
+                                    <button type="submit" class="btn mt-3 bg-red text-white rounded-3">Cadastrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <!-- Import JS JQuery -->
+        <script src="../../js/JQuery/jquery.min.js"></script>
+
+        <!-- Import JQuery Mask -->
+        <!-- <script src="../../js/JQuery/jquery.mask.min.js"></script> -->
+
+        <!-- Import JS Bootstrap -->
+        <script src="../../js/Bootstrap/bootstrap.min.js"></script>
+
+        <!-- Importando pacotes extras para novas funcionalidade -->
+        <script src="../../js/Bootstrap/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $(document).ready(function() { 
+                $(function () {
+                    $('[data-bs-toggle="tooltip"]').tooltip();
+                })
+                $('#checkSenha').click(function (){
+                    if ($(this).is (':checked')){
+                        $("#id_Senha").attr("type","text")
+                        $("#id_confirmacaoSenha").attr("type","text")
+                    }
+                    else{
+                        $("#id_Senha").attr("type","password")
+                        $("#id_confirmacaoSenha").attr("type","password")
+                    }
+                });
+            });
+        </script>
+
+    </body>
+    
+</html>

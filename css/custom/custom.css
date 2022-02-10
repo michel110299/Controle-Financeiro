@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+.IconeLogin {
+    background-color: #ffffff;
+    border: 1px solid #3a3434;
+
+}
+
+.InputLogin {
+    background-color: #ffffff;
+    border: 1px solid #3a3434;
+}
+
+.InputLogin:focus {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+.font-mulish{
+    font-family: 'Mulish', sans-serif;
+}
+
+.btn:hover{
+    opacity: 0.7;
+    color: black;
+}
+

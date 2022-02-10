@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashbord</title>
+
+        <!-- Import CSS Bootstrap -->
+        <link rel="stylesheet" href="../../css/Bootstrap/bootstrap.min.css">
+
+        <!-- Import Custom CSS -->
+        <link rel="stylesheet" href="../../css/custom/custom.css">
+
+        <!-- Import Floating Button -->
+        <link rel="stylesheet" href="../../css/floating-button/floating-button.min.css">
+
+        <!-- Import Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+        <!-- Import Pallete Colors -->
+        <link href="https://oondev.github.io/projects/pallete-colors/v1.0.0/pallete-colors.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <a class="floating-button floating-circle m-2 floating-bottom-end floating-xl bg-red-8" href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Adicionar Financeiro">
+            <span class="material-icons floating-icon-xl">add</span>
+        </a>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="row">
+                <div class="col col-md-11 col-sm-12 col-xs-12 col-lg-11 col-xl-11 mt-3">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-black " aria-current="page" href="#">Finanças</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-red-10" href="#">Dashbord</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Graficos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="mt-2">
+            </div>
+        </header>
+        <main class="vh-100" >
+            <div class="container">
+                <h2 class="mt-5 font-mulish text-center">Controle Financeiro</h2>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-4 col-sm-12 col-xs-12 col-lg-4 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="card-subtitle mb-2 text-muted">Entradas</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-end">
+                                            <i class="text-green material-icons">
+                                                vertical_align_top
+                                            </i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="text-center"> R$ 5000,00</h3>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-12 col-md-4 col-sm-12 col-xs-12 col-lg-4 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="card-subtitle mb-2 text-muted">Saídas</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-end">
+                                            <i class="text-red material-icons">
+                                                vertical_align_bottom
+                                            </i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="text-center"> R$ -2500,00</h3>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-12 col-md-4 col-sm-12 col-xs-12 col-lg-4 col-xl-4">
+                        <div class="card">
+                            <div class="card-body bg-green-5">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="card-subtitle mb-2 text-white">Total</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-end">
+                                            <span class="text-white material-icons">
+                                                attach_money
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="text-center text-white"> R$ 2500,00</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-hover mt-5" style="border-color:transparent;">
+                        <thead>
+                            <tr>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #f8f3f4;">
+                                <td>Freelance de website</td>
+                                <td class="text-green"> R$ 6.000,00</td>
+                                <td>Dev</td>
+                                <td>12/02/2021</td>
+                            </tr>
+                            <tr style="background-color: #f8f3f4;">
+                                <td>Aluguel</td>
+                                <td class="text-red">R$ 1.200,00</td>
+                                <td>Casa</td>
+                                <td>14/02/2021</td>
+                            </tr>
+                            <tr>
+                        </tbody>
+                        </table>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+
+        </footer>
+
+        <!-- Import JS JQuery -->
+        <script src="../../js/JQuery/jquery.min.js"></script>
+
+        <!-- Import JQuery Mask -->
+        <!-- <script src="../../js/JQuery/jquery.mask.min.js"></script> -->
+
+        <!-- Import JS Bootstrap -->
+        <script src="../../js/Bootstrap/bootstrap.min.js"></script>
+
+        <!-- Importando pacotes extras para novas funcionalidade -->
+        <script src="../../js/Bootstrap/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $(document).ready(function() { 
+                $(function () {
+                    $('[data-bs-toggle="tooltip"]').tooltip();
+                })
+                $('#checkSenha').click(function (){
+                    if ($(this).is (':checked')){
+                        $("#id_Senha").attr("type","text")
+                        $("#id_confirmacaoSenha").attr("type","text")
+                    }
+                    else{
+                        $("#id_Senha").attr("type","password")
+                        $("#id_confirmacaoSenha").attr("type","password")
+                    }
+                });
+            });
+        </script>
+
+    </body>
+    
+</html>
