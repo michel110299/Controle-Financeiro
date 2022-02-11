@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato</title>
+
+        <!-- Import CSS Bootstrap -->
+        <link rel="stylesheet" href="../../css/Bootstrap/bootstrap.min.css">
+
+        <!-- Import Custom CSS -->
+        <link rel="stylesheet" href="../../css/custom/custom.css">
+
+        <!-- Import Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+        <!-- Import Pallete Colors -->
+        <link href="https://oondev.github.io/projects/pallete-colors/v1.0.0/pallete-colors.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="col col-md-11 col-sm-12 col-xs-12 col-lg-11 col-xl-11 mt-3">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-black " aria-current="page" href="../Dashboard/index.html">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black " href="../sobre/index.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-red-10" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="input-group">
+                                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <i class="material-icons">
+                                        search
+                                    </i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="../Login/index.html">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="mt-2">
+            </div>
+        </header>
+        <main class="container">
+            <div class="row mt-5">
+                <div class="col col-md-8 col-sm-12 col-xs-12 col-lg-8 col-xl-8 mx-auto">
+                    <div class="card text-center p-2" style="border-radius:25px;">
+                        <div class="d-flex justify-content-center">
+                            <div class="col-10">
+                                <h2 class="mt-5 font-mulish text-center">Contato</h2>
+                                <hr>
+                            </div>
+                        </div>
+                        <form method="POST">
+                            <div class="card-body p-5">
+                                <div class="input-group mb-3 mt-2">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-nome"><i class="material-icons">person</i></span>
+                                    <input type="text" class="form-control InputLogin" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon-nome" required>
+                                </div>
+                                <div class="input-group mb-3 mt-2">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-email"><i class="material-icons">email</i></span>
+                                    <input type="text" class="form-control InputLogin" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon-email" required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text IconeLogin">
+                                        <i class="material-icons">
+                                        forward_to_inbox
+                                        </i>
+                                    </span>
+                                    <textarea required class="form-control InputLogin" aria-label="With textarea"></textarea>
+                                </div>
+                                <div class="d-grid col-8 mx-auto">
+                                    <button type="submit" class="btn mt-3 bg-red text-white rounded-3">Cadastrar</button>
+                                </div>
+                                <div class="d-grid mt-3 col-3">
+                                    <a id="id_limpar_campo" class="btn mt-3 bg-green-3 text-white rounded-3">Limpar Campos</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <!-- Import JS JQuery -->
+        <script src="../../js/JQuery/jquery.min.js"></script>
+
+
+        <!-- Import JS Bootstrap -->
+        <script src="../../js/Bootstrap/bootstrap.min.js"></script>
+
+        <!-- Importando pacotes extras para novas funcionalidade -->
+        <script src="../../js/Bootstrap/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $(document).ready(function() { 
+                $(function () {
+                    $('[data-bs-toggle="tooltip"]').tooltip();
+                })
+                $('#id_limpar_campo').click(function (){
+                    $(":input").val('');
+                });
+            });
+        </script>
+
+    </body>
+    
+</html>
