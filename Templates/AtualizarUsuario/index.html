@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contato</title>
+        <title>Cadastrar</title>
 
         <!-- Import CSS Bootstrap -->
         <link rel="stylesheet" href="../../css/Bootstrap/bootstrap.min.css">
@@ -20,21 +20,21 @@
 
     </head>
     <body>
-        <header>
+<header>
             <div class="row">
                 <div class="col col-md-11 col-sm-12 col-xs-12 col-lg-11 col-xl-11 mt-3">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link text-black " aria-current="page" href="../Dashboard/index.html">Principal</a>
+                            <a class="nav-link text-red-10 text-black" aria-current="page" href="../Dashboard/index.html">Principal</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-black " href="../sobre/index.html">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-red-10" href="#">Contato</a>
+                            <a class="nav-link text-black" href="../Contato/index.html">Contato</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="../AtualizarUsuario/index.html">Dados Cadastrais</a>
+                            <a class="nav-link text-red-10" href="">Dados Cadastrais</a>
                         </li>
                         <li class="nav-item">
                             <div class="input-group">
@@ -60,7 +60,7 @@
                     <div class="card text-center p-2" style="border-radius:25px;">
                         <div class="d-flex justify-content-center">
                             <div class="col-10">
-                                <h2 class="mt-5 font-mulish text-center">Contato</h2>
+                                <h2 class="mt-5 font-mulish text-center">Editar Usuário</h2>
                                 <hr>
                             </div>
                         </div>
@@ -74,19 +74,19 @@
                                     <span class="input-group-text IconeLogin" id="basic-addon-email"><i class="material-icons">email</i></span>
                                     <input type="text" class="form-control InputLogin" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon-email" required>
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-text IconeLogin">
-                                        <i class="material-icons">
-                                        forward_to_inbox
-                                        </i>
-                                    </span>
-                                    <textarea required class="form-control InputLogin" aria-label="With textarea"></textarea>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-password"><i class="material-icons">lock</i></span>
+                                    <input id="id_Senha" class="form-control InputLogin" type="password" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon-password" required>
                                 </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text IconeLogin" id="basic-addon-password-confirm"><i class="material-icons">lock</i></span>
+                                    <input id="id_confirmacaoSenha" class="form-control InputLogin" type="password" placeholder="Confirmação de Senha" aria-label="Username" aria-describedby="basic-addon-password-confirm" required>
+                                </div> 
+                                <div class="form-check form-switch">
+                                    <input id="checkSenha" class="form-check-input" type="checkbox" role="switch"  data-bs-toggle="tooltip" data-bs-placement="top" title="Ver senhas">
+                                </div> 
                                 <div class="d-grid col-8 mx-auto">
-                                    <button type="submit" class="btn mt-3 bg-red text-white rounded-3">Cadastrar</button>
-                                </div>
-                                <div class="d-grid mt-3 col-3">
-                                    <a id="id_limpar_campo" class="btn mt-3 bg-green-3 text-white rounded-3">Limpar Campos</a>
+                                    <button type="submit" class="btn mt-3 bg-red text-white rounded-3">Editar</button>
                                 </div>
                             </div>
                         </form>
@@ -102,6 +102,8 @@
         <!-- Import JS JQuery -->
         <script src="../../js/JQuery/jquery.min.js"></script>
 
+        <!-- Import JQuery Mask -->
+        <!-- <script src="../../js/JQuery/jquery.mask.min.js"></script> -->
 
         <!-- Import JS Bootstrap -->
         <script src="../../js/Bootstrap/bootstrap.min.js"></script>
@@ -114,8 +116,15 @@
                 $(function () {
                     $('[data-bs-toggle="tooltip"]').tooltip();
                 })
-                $('#id_limpar_campo').click(function (){
-                    $(":input").val('');
+                $('#checkSenha').click(function (){
+                    if ($(this).is (':checked')){
+                        $("#id_Senha").attr("type","text")
+                        $("#id_confirmacaoSenha").attr("type","text")
+                    }
+                    else{
+                        $("#id_Senha").attr("type","password")
+                        $("#id_confirmacaoSenha").attr("type","password")
+                    }
                 });
             });
         </script>

@@ -118,6 +118,9 @@
                             <a class="nav-link text-black" href="../Contato/index.html">Contato</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-black" href="../AtualizarUsuario/index.html">Dados Cadastrais</a>
+                        </li>
+                        <li class="nav-item">
                             <div class="input-group">
                                 <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
                                 <button type="button" class="btn btn-outline-secondary">
@@ -213,9 +216,85 @@
                                 <td>Dev</td>
                                 <td>12/02/2021 as 12:30:00</td>
                                 <td>
-                                    <button type="button" class="btn bg-green-6 text-white"> Editar </button>
+                                    <button type="button" class="btn bg-green-6 text-white" data-bs-target="#modalEditar-id_financeiro" data-bs-toggle="modal"> Editar </button>
                                     <button type="button" class="btn bg-red-6 text-white"> Excluir </button>
                                 </td>
+                                <div class="modal fade " id="modalEditar-id_financeiro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title " id="staticBackdropLabel">Adicionar Gastos</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body container">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="mb-3">
+                                                            <input type="text" class="form-control input-transacao"  placeholder="Titulo" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <input type="number" class="form-control input-transacao" value="0" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="btn-group gap-2 col-12 mx-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+                                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                                                            <label class="btn btn-lg btn-outline-success p-3 fs-6 bg-green-3 text-black btn-entrada" for="btnradio1">
+                                                                <div class="row">
+                                                                    <div class="d-flex justify-content-center">
+                                                                        <div class="col-6">
+                                                                            <div class="d-flex justify-content-end me-2">
+                                                                                <i class="text-green material-icons">
+                                                                                    vertical_align_top
+                                                                                </i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6">
+                                                                            <div class="d-flex justify-content-start">
+                                                                                Entrada
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                                            <label class="btn btn-lg btn-outline-danger p-3 fs-6 bg-red-3 text-black btn-saida" for="btnradio2">
+                                                                <div class="row">
+                                                                    <div class="d-flex justify-content-center">
+                                                                        <div class="col-6">
+                                                                            <div class="d-flex justify-content-end me-2">
+                                                                                <i class="text-red material-icons">
+                                                                                    vertical_align_bottom
+                                                                                </i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6">
+                                                                            <div class="d-flex justify-content-start">
+                                                                                Saída
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <select class="form-select input-transacao" aria-label="Default select example">
+                                                                <option selected value="" disabled>Selecione uma categoria</option>
+                                                                <option value="Estudos">Estudos</option>
+                                                                <option value="Casa">Casa</option>
+                                                                <option value="Viagem">Viagem</option>
+                                                                <option value="Compras">Compras</option>
+                                                                <option value="Farmácia">Farmácia</option>
+                                                            </select>
+                                                        </div>
+                                                        
+                                                        <div class="d-grid">
+                                                            <button class="btn btn-lg bg-green-6 text-white font-mulish" type="button">Cadastrar</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </tr>
                             <tr style="background-color: #f8f3f4;">
                                 <td>Aluguel</td>
